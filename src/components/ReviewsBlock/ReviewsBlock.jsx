@@ -15,16 +15,17 @@ export const ReviewsBlock = () => {
         </div>
         <div className="reviews__left">
           <div className="reviews__item">
-            <div>{<GlobalSvgSelector id="like" />}</div>
+            <div className="reviews__icon">{<GlobalSvgSelector id="like" />}</div>
             <div>131</div>
           </div>
           <div className="reviews__item">
-            <div>{<GlobalSvgSelector id="comment" />}</div>
+            <div className="reviews__icon">{<GlobalSvgSelector id="comment" />}</div>
             <div>14</div>
           </div>
         </div>
       </div>
       <Review name='Samuel Jackson' date='13 Apr 2022' commentText="Hey Eva! You're cool. Nice pic!"/>
+      <Review name='Samuel Jackson' date='13 Apr 2022' commentText="Hey Eva! You're cool. Nice pic!Hey Eva! You're cool. Nice pic!Hey Eva! You're cool. Nice pic!Hey Eva! You're cool. Nice pic!Hey Eva! You're cool. Nice pic!Hey Eva! You're cool. Nice pic!Hey Eva! You're cool. Nice pic!"/>
     </div>
   );
 };

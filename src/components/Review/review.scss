@@ -1,0 +1,45 @@
+@import 'assets/styles/variables.scss';
+
+.review {
+  line-height: 19px;
+  margin-bottom: 17px;
+  &__header {
+    display: flex;
+    margin-bottom:12px;
+  }
+  &__name {
+    margin-right: 8px;
+    font-weight: 700;
+  }
+  &__date {
+    font-size: 11px;
+    color: $secondary-text;
+  }
+  &__comment {
+    padding: 11px 20px;
+    background-color: $commentField-color;
+    border: 1px solid $commentField-borderColor;
+    box-shadow: 0px 4px 10px rgba(128, 128, 128, 0.1);
+    position: relative;
+    &:before {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 24px;
+      top: -9px;
+      border-bottom: 9px solid $commentField-borderColor;
+      border-right: 9px solid transparent;
+    }
+    &:after {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 25px;
+      top: -6.5px;
+      border-bottom: 8px solid $commentField-color;
+      border-right: 8px solid transparent;
+    }
+  }
+}

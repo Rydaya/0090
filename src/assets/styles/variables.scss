@@ -1,4 +1,11 @@
-$background-color: #E5E5E5;
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+
+//FontFamily
+$fontFamily: Arial, Helvetica, sans-serif;
+$fontFamilyBtn: 'PT Sans', sans-serif;
+
+//Colors
+$background-color: #FFFFFF;
 $footerBackground-color: #F2F2F2;
 $main-text: #333333;
 $secondary-text: #808080;
@@ -10,6 +17,11 @@ $link-color: #005DA1;
 $commentField-color: #F2FBFF;
 $commentField-borderColor: #C4CBCF;
 $btn-color: #FDD639;
+
+//Sizes
+$maxWidthContainer: 720px;
+$minWidthContainer: 360px;
+
 
 
 

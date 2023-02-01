@@ -1,0 +1,44 @@
+@import 'assets/styles/variables.scss';
+
+.header {
+  position: relative;
+  padding-left: 151px;
+  line-height: 20px;
+  margin-bottom: 15px;
+  &__title {
+    margin-bottom: 2px;
+  }
+  &__subtitle {
+    font-size: 12px;
+    color: $secondary-text;
+    margin-bottom: 5px;
+  }
+  &__about {
+    position: relative;
+    right: 45px;
+    width: calc(100% + 45px);
+    padding: 7px 7px 7px 45px;
+    background: $aboutField-color;
+    border: 1px solid $aboutField-borderColor;
+    border-radius: 5px;
+  }
+  &__photo {
+    position: absolute;
+    left: 20px;
+    top: -6px;
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+  }
+  @media screen and (max-width: 400px){
+    padding-left: 127px;
+    &__photo {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

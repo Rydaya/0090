@@ -1,0 +1,26 @@
+@import 'variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fontFamily;
+  color: $main-text;
+  font-size: 14px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.wrapper {
+  max-width: $maxWidthContainer;
+  min-width: $minWidthContainer;
+  margin: 0 auto;
+  padding-top: 20px;
+  & > *{
+    padding: 0 20px;
+  }
+}

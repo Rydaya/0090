@@ -1,0 +1,62 @@
+@import 'assets/styles/variables.scss';
+
+.rates {
+  padding-left: 131px;
+  line-height: 15px;
+  font-size: 13px;
+  margin-bottom: 18px;
+  &__title {
+    text-align: right;
+    padding: 0px 24px 8px 0px;
+    border-bottom: 1px solid $aboutField-borderColor;
+  }
+  &__graph {
+    padding: 15px 24px 13px 0px;
+    border-bottom: 1px solid $aboutField-borderColor;
+    margin-bottom: 9px;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+    position: relative;
+  }
+  &__text {
+    position: relative;
+    z-index: 100;
+    top: 0;
+    left: 6px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    height: 24px;
+  }
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    border-radius: 0px 3px 3px 0px;
+    background-color: $rateSecondary-color;
+    &_green{
+        background-color: $rateMain-color;
+    }
+  }
+  &__amount {
+    flex-shrink: 0;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+  }
+  &__total {
+    padding-right: 24px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  @media screen and (max-width: 400px){
+    padding-left: 107px;
+  }
+}

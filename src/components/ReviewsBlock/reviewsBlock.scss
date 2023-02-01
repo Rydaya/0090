@@ -1,0 +1,38 @@
+@import 'assets/styles/variables.scss';
+
+.reviews {
+  margin-bottom: 5px;
+  &__header,
+  &__right,
+  &__left,
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__header {
+    margin-bottom: 13px;
+  }
+  &__right {
+    h2 {
+      margin-right: 8px;
+    }
+    button {
+      border: none;
+      background-color: $background-color;
+      color: $link-color;
+      text-decoration: underline;
+      padding: 0;
+    }
+  }
+  &__item:first-child {
+    margin-right: 16px;
+  }
+  &__icon {
+    margin-right: 2px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    padding-top: 3px;
+  }
+}

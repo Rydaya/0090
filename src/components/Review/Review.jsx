@@ -8,7 +8,9 @@ export const Review = ({ name, date, commentText }) => {
         <div className="review__name">{name}</div>
         <div className="review__date">{date}</div>
       </div>
-      <div className="review__comment">{commentText}</div>
+      <div className="review__comment">
+        {commentText}
+      </div>
     </div>
   );
 };
