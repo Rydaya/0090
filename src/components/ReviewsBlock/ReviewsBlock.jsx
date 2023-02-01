@@ -1,11 +1,13 @@
 import React from 'react';
-
+import { useSelector } from 'react-redux';
 import { Review } from 'components/Review/Review';
 
 import './reviewsBlock.scss';
 import { GlobalSvgSelector } from 'assets/icons/global/GlobalSvgSelector';
 
 export const ReviewsBlock = () => {
+  const comments = useSelector((state) => state.commentsSlice.comments);
+
   return (
     <div className="reviews">
       <div className="reviews__header">
@@ -24,8 +26,9 @@ export const ReviewsBlock = () => {
           </div>
         </div>
       </div>
-      <Review name='Samuel Jackson' date='13 Apr 2022' commentText="Hey Eva! You're cool. Nice pic!"/>
-      <Review name='Samuel Jackson' date='13 Apr 2022' commentText="Hey Eva! You're cool. Nice pic!Hey Eva! You're cool. Nice pic!Hey Eva! You're cool. Nice pic!Hey Eva! You're cool. Nice pic!Hey Eva! You're cool. Nice pic!Hey Eva! You're cool. Nice pic!Hey Eva! You're cool. Nice pic!"/>
+      {comments.map(({ name, date, comment }) => (
+        <Review key={name + date} name={name} date={date} commentText={comment} />
+      ))}
     </div>
   );
 };
