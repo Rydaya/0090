@@ -50,15 +50,17 @@ export const Footer = () => {
   const handleSubmit = (e) => {
     if (e.type === 'submit' || (e.charCode === 13 && e.ctrlKey)) {
       e.preventDefault();
-      const commentInfo = {
-        name: name.value,
-        date: moment().format('D MMM YYYY'),
-        comment: comment.value,
-      };
-      dispatch(addComment(commentInfo));
-      setName({ value: '', isFilled: false, error: '' });
-      setComment({ value: '', isFilled: false, error: '' });
-      setFormValid(false);
+      if (formValid) {
+        const commentInfo = {
+          name: name.value,
+          date: moment().format('D MMM YYYY'),
+          comment: comment.value,
+        };
+        dispatch(addComment(commentInfo));
+        setName({ value: '', isFilled: false, error: '' });
+        setComment({ value: '', isFilled: false, error: '' });
+        setFormValid(false);
+      }
     }
   };
 
