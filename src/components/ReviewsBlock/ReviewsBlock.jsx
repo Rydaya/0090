@@ -27,7 +27,7 @@ export const ReviewsBlock = () => {
         </div>
       </div>
       {comments.map(({ name, date, comment }) => (
-        <Review key={name + date} name={name} date={date} commentText={comment} />
+        <Review key={name + Math.random() * 10000} name={name} date={date} commentText={comment} />
       ))}
     </div>
   );
