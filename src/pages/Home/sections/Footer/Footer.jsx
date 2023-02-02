@@ -68,8 +68,8 @@ export const Footer = () => {
     <footer className="footer">
       <form className="footer__form" onSubmit={handleSubmit} onKeyPress={handleSubmit}>
         <label htmlFor="name" className="footer__name">
-          Name:
           <input
+            placeholder="Enter name"
             value={name.value}
             type="text"
             name="name"
@@ -81,8 +81,8 @@ export const Footer = () => {
           {name.isFilled && name.error && <div className="footer__error">{name.error}</div>}
         </label>
         <label htmlFor="message">
-          Message:
           <textarea
+            placeholder="Enter your comment"
             value={comment.value}
             id="message"
             name="comment"
